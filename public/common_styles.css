@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.outer-div{
+    background-color:#1e272e;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.main-div{
+    background-color: #D7D5D5;
+    height: 75vh;
+    width: 65vw;
+    position: absolute;
+    display:grid;
+    grid-template-columns: 1.5fr repeat(2,1fr);
+    grid-template-rows: 4fr repeat(3,1fr);
+    grid-gap: 6px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 21px;
+    text-align: center;
+    padding: 13px 13px;
+}
+.flag-div{
+    text-align: center;
+    background-color: #C5BFBF;
+}
+
+.capital-div{
+    background-color: #C5BFBF;
+    grid-column: 2/-1;
+    text-align:center;
+}
+
+.population-div , .region-div,.currencies-div2 ,.currencies-div1 ,.subregion-div,.timezones-div ,.nativeName-div,.language-div,.callingCodes-div,.currencies-div1 , .capital-div
+{
+    background-color: #C5BFBF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.region-div , .subregion-div{
+    position: relative;
+}
+.subregion-div::after{
+    content: "SUB-REGION";
+    color: white;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    opacity: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: opacity 0.5s ease;
+    font-size: 20px;
+
+}
+.region-div::after {
+    content: "REGION";
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    opacity: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: opacity 0.5s ease;
+    font-size: 20px;
+
+}
+.region-div:hover::after , .subregion-div:hover::after{
+    opacity:0.85;
+}
+img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+img:hover{
+    transform: scale(1.09); 
+}
+.flag{
+    overflow: hidden;
+    width: 400px;
+    height: 225px;
+}

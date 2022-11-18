@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>USA Information</title>
+  <meta name="description" content="USA Information">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="common_styles.css">
+
+</head>
+
+<body>
+    <div class ="outer-div">     
+</div>
+
+
+
+<script>
+    const container = document.querySelector(".outer-div");
+    const request= new XMLHttpRequest();
+    request.open('GET',"https://restcountries.eu/rest/v2/name/usa");
+    request.send();
+    request.addEventListener('load', function(){
+        const [data] =JSON.parse(this.responseText);   
+
+     const myData =`
+<div class="main-div">
+    <div class="flag-div">
+        <div class="flag"><img  class="flag" src="${data.flag}"></div><br>
+       <b> <h2> ${data.name} </h2></b>    
+ </div>
+ <div class="region-div"><h1><b>${data.region}</b></h1> 
+    </div>
+
+    <div class="subregion-div"> <b><h2>${data.subregion} </h2></b></div>
+
+     <div class="population-div">  ${data.population}<br>
+        Population 
+                    </div>
+
+ <div class="capital-div">   ${data.capital}<br>
+    Capital </div>
+
+ <div class="timezones-div"> ${data.timezones[0]} <br>
+    Timezones</div>
+<div class="nativeName-div">${data.nativeName} <br>
+        Native-Name</div>
+        <div class="language-div">${data.languages[0].nativeName}<br>
+            Language </div>
+<div class="callingCodes-div"> ${data.callingCodes}<br>
+        Calling Code </div>
+    
+    <div class="currencies-div1">
+        ${data.currencies[0].code}<br>
+        Currency Code
+    </div>
+    <div class="currencies-div2">
+        ${data.currencies[0].symbol}<br>
+        Currency Symbol
+    </div>     
+</div>
+  `;
+
+  container.insertAdjacentHTML("afterbegin",myData);
+
+    });
+</script>
+</body>
+</html>

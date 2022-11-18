@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Welcome Page</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+  <script>
+
+    function getCname(){
+      var cname = document.getElementById('searchtext').value
+      localStorage.setItem("countryName", cname);
+    }
+  </script>
+</head>
+
+<body>
+  
+    <div class="outer-div"> 
+      <div class="nav"> 
+        <div class="logo">
+          <img src="world-icon-png-3022.png">
+         <b> COUNTRY<br/>
+          INFO<br/>
+          4U</br/>
+        </div>
+        <div class="search-box">
+          <form action="common_country.html">
+          <input type="text" class="search-text" id="searchtext" placeholder="Enter the Country Name" >
+          <button onclick="getCname()" class="search-btn">
+          <i class="fas fa-search-location fa-1.8x"></i></button></form>
+        </div>
+
+      </div>
+       <div> <h1>SELECT THE COUNTRY <br>TO VIEW ITS INFORMATION </h1></div>
+       <div class="country-names">
+        
+        <a href="india.html">INDIA</a>
+         <a href="usa.html">USA</a>
+         <a href="china.html">CHINA</a>
+         <a href="australia.html">AUSTRALIA</a>
+         <a href="russia.html">RUSSIA</a>
+       </div>
+       </div>
+</body>
+</html>

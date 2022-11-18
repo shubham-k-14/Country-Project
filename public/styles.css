@@ -1,0 +1,122 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+    .outer-div{
+        background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(christopher-burns-Kj2SaNHG-hg-unsplash.jpg);
+        background-size:100% 100%;
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
+    
+    h1{
+        position: absolute;
+        color:whitesmoke;
+        top:25vh;
+        left:23vw;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size:60px;
+        text-shadow: 3px 3px 0px #1e272e;
+    }
+    .country-names  a{
+        background-color: snow;
+        text-decoration: none;
+        padding: 4rem 6rem;
+        font-size: 25px;
+        box-shadow: rgba(218, 211, 211, 0.25) 0px 54px 55px, rgba(207, 199, 199, 0.12) 0px -12px 30px, rgba(226, 217, 217, 0.12) 0px 4px 6px, rgba(214, 201, 201, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        color: black;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        border-style:hidden;
+        transition: all 0.5s;
+        position: relative;
+        overflow: hidden;
+    }
+    .country-names  a:hover{
+        background-color: #1e272e;
+        color:#fff;
+    }
+    .country-names > a::before{
+        content:"";
+        background-color: aliceblue;
+        width: 200%;
+        height: 35%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%)rotate(45deg);
+        transition: all 0.6s ease;
+    }
+    .country-names > a:hover::before{
+        transform: translateX(100%)rotate(45deg);      
+    }
+
+
+    .country-names{
+       position: absolute;
+       width:100vw;
+       height: 20vh;
+       display:flex;
+       align-items: center;
+       justify-content: space-evenly;
+       top:65vh;
+    }
+    
+    .nav{
+        width: 100vw;
+        height: 15vh;
+        background: rgba(255, 255, 255, 0.7);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .search-box{
+        top:30px;
+        position: absolute;
+        right: 90px;
+    }
+    button ,button:hover{
+        text-decoration: none;
+    }
+    .search-box{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .search-text{
+        width: 13rem;
+        border-radius: 5rem;
+        border: none;
+        outline: none;
+        padding: 13px;
+        transition: all 0.4s linear;
+    }
+    .search-text:focus{
+        outline: none;
+    }
+    .search-btn{
+        height: 45px;
+        width: 45px;
+        background-color: #3C4757;
+        color: #fff;
+        outline: none;
+        border: none;
+        position: absolute;
+        right: -60px;;
+        top:-2px;
+        display: grid;
+        place-items:center;
+        border-radius: 50%;
+    }
+
+ .logo{
+     height: 60px;
+     width: 60px;
+     position: absolute;
+     left: 30px;
+     display: flex;  
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
